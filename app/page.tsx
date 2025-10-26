@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col md:flex-row-reverse bg-gray-50 font-body">
       {/* Sidebar / Right Menu */}
-      <aside className="bg-white shadow-md flex md:flex-col flex-row justify-center md:justify-start items-center md:items-start w-full md:w-40 px-6 py-4 md:py-8 space-x-6 md:space-x-0 md:space-y-6">
+      <aside className="bg-white shadow-md flex md:flex-col flex-row justify-center md:justify-start items-center md:items-start w-full md:w-40 px-6 py-4 md:py-8 space-x-6 md:space-x-0 md:space-y-6 md:sticky md:top-0 md:h-screen">
         <a href="#home" className="text-gray-600 hover:text-gray-900">
           Home
         </a>
@@ -59,3 +59,4 @@ export default function HomePage() {
     </div>
   );
 }
+ 
