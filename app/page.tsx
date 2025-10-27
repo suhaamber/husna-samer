@@ -25,7 +25,6 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col md:flex-row-reverse bg-white font-heading">
-      '
       <aside
         className={`md:sticky md:top-0 md:right-0 md:h-screen bg-white flex md:flex-col flex-row justify-center md:justify-start items-center md:items-start w-full md:w-40 px-6 py-4 md:py-8 space-x-6 md:space-x-0 md:space-y-6 transition-transform duration-500 ${
           showNav
@@ -59,9 +58,9 @@ export default function HomePage() {
             id="home"
             className="flex flex-col items-center justify-center px-6 md:px-20 py-10"
           >
-            <div className="flex flex-col md:flex-row items-center md:items-end">
+            <div className="flex flex-col md:flex-row items-center">
               {/* Hero Image */}
-              <div className="md:w-full max-w-[600px] flex justify-center mb-10 md:mb-0 relative">
+              <div className="w-full flex justify-center mb-4 md:mb-0">
                 <Image
                   src="/hero-image-1.jpg"
                   alt="Hero Image"
@@ -69,17 +68,17 @@ export default function HomePage() {
                   height={400}
                   className="shadow-lg"
                 />
-
-                {/* Mobile title: bottom-right over image */}
-                <div className="absolute bottom-4 right-4 md:hidden">
-                  <h1 className="text-4xl font-heading text-white leading-none">
-                    husna samer.
-                  </h1>
-                </div>
               </div>
 
-              {/* Desktop title: right of image, two lines */}
-              <div className="hidden md:flex flex-col justify-end md:pl-6 h-[400px]">
+              {/* Mobile title: below image */}
+              <div className="flex md:hidden justify-end w-full mt-2 px-4">
+                <h1 className="text-4xl font-heading text-red-900 leading-none">
+                  husna samer.
+                </h1>
+              </div>
+
+              {/* Desktop title: right of image */}
+              <div className="hidden md:flex flex-col justify-end md:ml-6 h-[400px]">
                 <h1 className="text-7xl font-heading text-red-900 leading-none">
                   husna
                 </h1>
@@ -115,7 +114,6 @@ export default function HomePage() {
             </p>
           </div>
         </section>
-        
       </div>
     </div>
   );
