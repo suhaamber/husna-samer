@@ -1,15 +1,8 @@
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-}
+notes: 
+
+
+
+todo: 
+
+- fix mobile image placement, move to top and align title to left 
+- figure out how to grid the work and captions so that the images and text are aligned well 

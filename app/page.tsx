@@ -25,6 +25,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col md:flex-row-reverse bg-white font-heading">
+      {/* NavBar */}
       <aside
         className={`md:sticky md:top-0 md:right-0 md:h-screen bg-white flex md:flex-col flex-row justify-center md:justify-start items-center md:items-start w-full md:w-40 px-6 py-4 md:py-8 space-x-6 md:space-x-0 md:space-y-6 transition-transform duration-500 ${
           showNav
@@ -48,6 +49,8 @@ export default function HomePage() {
           Contact
         </a>
       </aside>
+
+      {/* Body */}
       <div className="flex-1 flex flex-col">
         <main
           id="home"
@@ -89,6 +92,7 @@ export default function HomePage() {
             </div>
           </section>
         </main>
+        {/* About Section */}
         <section id="about" className="bg-white py-20 px-6 md:px-20">
           <h2 className="text-5xl font-heading text-red-900 mb-12">
             husna samer.
@@ -112,6 +116,45 @@ export default function HomePage() {
               tempor turpis. Donec et turpis id est scelerisque elementum. Nam
               aliquet rhoncus turpis, faucibus sollicitudin purus cursus at.
             </p>
+          </div>
+        </section>
+
+        {/* Work Section */}
+        <section id="work" className="bg-white py-20 px-6 md:px-20">
+          <h2 className="text-5xl font-heading text-red-900 mb-10">
+            work &gt; 2025
+          </h2>
+
+          <div className="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+            {/* Column 1 */}
+            <div className="flex-1 flex flex-col justify-end">
+              <div className="h-[300px] w-full mb-4 relative">
+                <Image
+                  src="/alienate.jpg"
+                  alt="alienate in 2025"
+                  fill
+                  className="object-contain object-left mb-4"
+                />
+              </div>
+              <p className="text-left font-body text-gray-600 text-base md:text-lg">
+                Caption for project 1
+              </p>
+            </div>
+
+            {/* Column 2 */}
+            <div className="flex-1 flex flex-col justify-end">
+              <div className="h-[300px] w-full mb-4 relative">
+              <Image
+                src="/piece-2025.jpg"
+                alt="piece 2 in 2025"
+                fill
+                className="object-contain object-left mb-4"
+              />
+              </div>
+              <p className="text-left font-body text-gray-600 text-base md:text-lg">
+                Caption for project 2
+              </p>
+            </div>
           </div>
         </section>
       </div>
