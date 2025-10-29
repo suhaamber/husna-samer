@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Archivo+Black&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -29,14 +30,25 @@ html {
 
 /* Headings */
 .font-heading {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-heading-thin {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Body text */
 .font-body {
-  font-family: 'Antic Didone', serif;
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-
 
 body {
   background: var(--background);
