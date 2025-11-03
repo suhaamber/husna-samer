@@ -27,7 +27,7 @@ export default function HomePage() {
         >
           {/* Background Image */}
           <Image
-            src="/hero-image-2.jpg"
+            src="/hero-image-1.png"
             alt="Hero Background"
             fill
             className="object-cover"
