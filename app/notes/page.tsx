@@ -1,0 +1,12 @@
+import Navbar from "../components/Navbar";
+
+export default function NotesPage() {
+  return (
+    <>
+      <Navbar />
+      <main className="min-h-screen flex items-center justify-center text-orange-50 bg-stone-900">
+        <h1 className="text-3xl font-heading">Page under construction.</h1>
+      </main>
+    </>
+  );
+}

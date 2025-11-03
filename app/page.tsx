@@ -3,7 +3,10 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import FadeInWhenVisible from "./FadeInWhenVisible";
+import FadeInWhenVisible from "./components/FadeInWhenVisible";
+import Navbar from "./components/Navbar";
+import Link from "next/link";
+import Footer from "./components/Footer";
 
 export default function HomePage() {
   const [showNav, setShowNav] = useState(true);
@@ -28,46 +31,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col md:flex-row-reverse bg-white font-heading">
       {/* Transparent Navbar */}
-      <nav
-        className={`fixed top-0 left-0 w-full z-50 bg-transparent py-6 transition-transform duration-500 ${
-          showNav ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <ul className="flex justify-evenly text-orange-50 font-heading-thin text-s sm:text-base md:text-xl font-bold">
-          <li>
-            <a
-              href="#about"
-              className="hover:text-stone-300 hover:underline italic md:tracking-widest"
-            >
-              about
-            </a>
-          </li>
-          <li>
-            <a
-              href="#work"
-              className="hover:text-stone-300 hover:underline italic md:tracking-widest"
-            >
-              work
-            </a>
-          </li>
-          <li>
-            <a
-              href="#notes"
-              className="hover:text-stone-300 hover:underline italic md:tracking-widest"
-            >
-              notes
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className="hover:text-stone-300 hover:underline italic md:tracking-widest"
-            >
-              contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       {/* Body */}
       <div className="flex-1 flex flex-col">
@@ -106,7 +70,7 @@ export default function HomePage() {
             <h2 className="text-5xl font-heading text-orange-50 mb-12">
               husna samer.
             </h2>
-            <div className="flex flex-col space-y-8 ml-4 md:ml-12 md:max-w-[60%]">
+            <div className="flex flex-col space-y-8 ml-4 md:ml-12 md:max-w-[60%] mb-12">
               <p className="font-body text-orange-100 text-justify text-base md:text-lg">
                 Husna Samer is a UAE-based artist whose practice has evolved
                 through years of mentorship, each shaping her exploration of how
@@ -117,10 +81,11 @@ export default function HomePage() {
               <p className="font-body text-orange-100 text-justify text-base md:text-lg">
                 For Samer, memory is both collective and personal, it plays a
                 vital role in reshaping the boundaries of identity. Her work
-                approaches this <i>self</i> as a mutable vessel of experience, where
-                memory gathers, erodes, and transforms. Guided by an instinctive
-                pull toward blues and reds, she constructs emotive, layered
-                compositions that oscillate between serenity and intensity.
+                approaches this <i>self</i> as a mutable vessel of experience,
+                where memory gathers, erodes, and transforms. Guided by an
+                instinctive pull toward blues and reds, she constructs emotive,
+                layered compositions that oscillate between serenity and
+                intensity.
               </p>
               <p className="font-body text-orange-100 text-justify text-base md:text-lg">
                 Rooted in an inclination toward symbolism and surrealism,
@@ -134,11 +99,28 @@ export default function HomePage() {
                 permanence and change.
               </p>
             </div>
+            <Link
+              href="/work"
+              className="inline-flex items-start text-orange-100 text-2xl md:text-3xl font-heading hover:text-orange-300"
+            >
+              View Work
+              {/* Diagonal up arrow SVG */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 ml-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
+              </svg>
+            </Link>
           </FadeInWhenVisible>
         </section>
 
         {/* Work Section */}
-        <section id="work" className="bg-stone-800 py-20 px-6 md:px-20">
+        <section id="work" className="bg-stone-800 py-20 px-6 md:px-20 hidden">
           <FadeInWhenVisible>
             <h2 className="text-5xl font-heading text-orange-50 mb-10">
               <u>2025</u>
@@ -182,7 +164,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bg-stone-800 py-20 px-6 md:px-20">
+        <section className="bg-stone-800 py-20 px-6 md:px-20 hidden">
           <FadeInWhenVisible>
             <h2 className="text-5xl font-heading text-orange-50 mb-10">
               <u>2024</u>
@@ -227,62 +209,7 @@ export default function HomePage() {
         </section>
 
         {/* Contact Section */}
-        <section
-          id="contact"
-          className="bg-stone-900 text-orange-50 py-12 px-6 md:px-20"
-        >
-          {/* Divider line */}
-          <div className="border-t border-orange-100 opacity-40 mb-8"></div>
-
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm md:text-base">
-            {/* Left: Email */}
-            <a
-              href="mailto:husnasamer@example.com"
-              className="hover:underline mb-4 md:mb-0"
-            >
-              husnasamer@example.com
-            </a>
-
-            {/* Right: Social Icons */}
-            <div className="flex space-x-6">
-              {/* Instagram */}
-              <a
-                href="https://www.instagram.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="hover:text-orange-300 transition-colors"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  className="w-6 h-6"
-                >
-                  <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5c3.176 0 5.75-2.574 5.75-5.75v-8.5C22 4.574 19.426 2 16.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm6.5.5a1 1 0 110-2 1 1 0 010 2zM12 9a3 3 0 100 6 3 3 0 000-6z" />
-                </svg>
-              </a>
-
-              {/* Saatchi Art */}
-              <a
-                href="https://www.saatchiart.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Saatchi Art"
-                className="hover:text-orange-300 transition-colors"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  className="w-6 h-6"
-                >
-                  <path d="M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12 12-5.372 12-12S18.627 0 12 0zm4.5 17.5h-9v-2h9v2zm0-4h-9v-2h9v2zm0-4h-9v-2h9v2z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </section>
+        <Footer />
       </div>
     </div>
   );
