@@ -4,6 +4,11 @@ import { themes } from "../themes";
 import FadeInWhenVisible from "@/app/components/FadeInWhenVisible";
 import Footer from "@/app/components/Footer";
 
+export const metadata = {
+  title: "Husna Samer | Work",
+  description: "View Husna Samer's work.",
+};
+
 export default async function ThemePage({
   params,
 }: {
@@ -30,7 +35,7 @@ export default async function ThemePage({
             <h3 className="text-base md:text-xl uppercase font-heading tracking-widest text-stone-400 mb-2">
               Work
             </h3>
-            <h1 className="text-2xl md:text-4xl md:text-6xl font-heading mb-6">
+            <h1 className="text-2xl md:text-4xl font-heading mb-6">
               {theme.title}
             </h1>
             <p className="text-base font-body md:text-lg text-stone-300 leading-relaxed max-w-3xl">

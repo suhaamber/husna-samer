@@ -1,5 +1,10 @@
 import Navbar from "../components/Navbar";
 
+export const metadata = {
+  title: "Husna Samer | Notes",
+  description: "View Husna Samer's work.",
+};
+
 export default function NotesPage() {
   return (
     <>

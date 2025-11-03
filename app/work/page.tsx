@@ -1,11 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import { themes } from "./themes";
 import Link from "next/link";
 import FadeInWhenVisible from "../components/FadeInWhenVisible";
 import Footer from "../components/Footer";
+
+export const metadata = {
+  title: "Husna Samer | Work",
+  description: "View Husna Samer's work.",
+};
 
 export default function WorkPage() {
   return (

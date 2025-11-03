@@ -1,32 +1,18 @@
 // app/page.tsx
-"use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import FadeInWhenVisible from "./components/FadeInWhenVisible";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
 import Footer from "./components/Footer";
+import { ReactNode } from "react";
+
+export const metadata = {
+  title: "Husna Samer",
+  description: "Husna Samer",
+};
 
 export default function HomePage() {
-  const [showNav, setShowNav] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
-
-  // hide navbar when scrolling down, show when scrolling up
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setShowNav(false); // scrolling down → hide navbar
-      } else {
-        setShowNav(true); // scrolling up → show navbar
-      }
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
   return (
     <div className="flex flex-col md:flex-row-reverse bg-white font-heading">
