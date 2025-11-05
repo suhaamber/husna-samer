@@ -9,8 +9,8 @@ export default function NotesPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen flex items-center justify-center text-orange-50 bg-stone-900">
-        <h1 className="text-3xl font-heading">Page under construction.</h1>
+      <main className="min-h-screen flex items-center justify-center text-orange-50 bg-stone-800">
+        <h1 className="text-xl md:text-3xl text-center font-heading">Page under construction.</h1>
       </main>
     </>
   );

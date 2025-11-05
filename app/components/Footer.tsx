@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <section
           id="contact"
-          className="bg-stone-900 text-orange-50 py-12 px-6 md:px-20"
+          className="bg-stone-800 text-orange-50 py-12 px-6 md:px-20"
         >
           {/* Divider line */}
           <div className="border-t border-orange-100 opacity-40 mb-8"></div>

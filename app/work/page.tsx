@@ -13,7 +13,7 @@ export const metadata = {
 export default function WorkPage() {
   return (
     <>
-    <div className="min-h-screen bg-stone-900 text-orange-50 px-6 md:px-20 py-20 md:py-36">
+    <div className="min-h-screen bg-stone-800 text-orange-50 px-6 md:px-20 py-20 md:py-36">
       <Navbar />
       <main>
         <FadeInWhenVisible>

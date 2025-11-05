@@ -19,7 +19,7 @@ export default async function ThemePage({
 
   if (!theme) {
     return (
-      <main className="min-h-screen flex items-center justify-center text-orange-50 bg-stone-900">
+      <main className="min-h-screen flex items-center justify-center text-orange-50 bg-stone-800">
         <h1 className="text-3xl font-heading">Theme not found</h1>
       </main>
     );
@@ -28,7 +28,7 @@ export default async function ThemePage({
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-stone-900 text-orange-50 px-6 md:px-20 py-24">
+      <main className="min-h-screen bg-stone-800 text-orange-50 px-6 md:px-20 py-24">
         {/* Subheading and Theme Title */}
         <FadeInWhenVisible>
           <div className="mb-12">

@@ -41,7 +41,7 @@ export default function Navbar() {
     >
       <ul className="flex justify-evenly py-6 text-orange-50 font-heading-thin italic tracking-widest text-sm sm:text-base md:text-lg">
         <li>
-          <Link href="/#about" className="hover:text-orange-300">
+          <Link href="/#home" className="hover:text-orange-300">
             home
           </Link>
         </li>
@@ -56,7 +56,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/#contact" className="hover:text-orange-300">
+          <Link href="/contact" className="hover:text-orange-300">
             contact
           </Link>
         </li>

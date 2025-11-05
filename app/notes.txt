@@ -4,4 +4,9 @@ notes:
 
 todo: 
 
-- fix mobile version
+- add rayan project - new theme template for digital projects? 
+- update images - add white border to all images consistently 
+- new format for images? 
+- add contact page 
+- update footer 
+- add web credits 
