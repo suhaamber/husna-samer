@@ -129,7 +129,7 @@ export const themes: Record<
   lost_time: {
     title: "In Search of Lost Time",
     subtitle:
-      "Exploring the elusive nature of memory and its transformation through time",
+      "Exploring the elusive nature of memory and its transformation through time.",
     description:
       "This series explores the elusive nature of memory and its transformation through time, aligning with my ongoing examination of the intersection between personal history and the physical spaces that shape identity. I construct landscapes both tangible and intangible—spaces where time is fluid, slipping between the gaps of past and present, reality and dream. These paintings invite the viewer into a contemplative exploration of what remains when time itself is lost, leaving only traces of experiences that have shaped the self. The abstracted forms and layered materials serve as a metaphor for the fragmented nature of memory and the search for continuity in the midst of life’s impermanence.",
     works: [

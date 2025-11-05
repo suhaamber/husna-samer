@@ -58,7 +58,7 @@ export default function HomePage() {
             </h2>
             <div className="flex flex-col space-y-8 ml-4 md:ml-12 md:max-w-[60%] mb-12">
               <p className="font-body text-orange-100 text-justify text-base md:text-lg">
-                Husna Samer is a UAE-based artist whose practice has evolved
+                <b> Husna Samer </b> is a UAE-based artist whose practice has evolved
                 through years of mentorship, each shaping her exploration of how
                 the meaning of home shifts within an increasingly global and
                 migratory context, altering our perception of memory and

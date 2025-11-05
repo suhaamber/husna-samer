@@ -3,6 +3,7 @@ import Image from "next/image";
 import { themes } from "../themes";
 import FadeInWhenVisible from "@/app/components/FadeInWhenVisible";
 import Footer from "@/app/components/Footer";
+import Link from "next/link";
 
 export const metadata = {
   title: "Husna Samer | Work",
@@ -32,9 +33,12 @@ export default async function ThemePage({
         {/* Subheading and Theme Title */}
         <FadeInWhenVisible>
           <div className="mb-12">
-            <h3 className="text-base md:text-xl uppercase font-heading tracking-widest text-stone-400 mb-2">
+            <Link
+              href="/work"
+              className="text-base md:text-xl uppercase font-heading underline tracking-widest text-stone-400 mb-2"
+            >
               Work
-            </h3>
+            </Link>
             <h1 className="text-2xl md:text-4xl font-heading mb-6">
               {theme.title}
             </h1>
@@ -80,6 +84,15 @@ export default async function ThemePage({
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="pt-12">
+          <Link
+          href="/work"
+          className="text-base md:text-xl uppercase font-heading underline tracking-widest text-stone-400 pt-8"
+        >
+          back to work
+        </Link>
         </div>
       </main>
       <Footer />
