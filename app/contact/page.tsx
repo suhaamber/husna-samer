@@ -76,7 +76,7 @@ export default function ContactPage() {
               {/* Text-based social links */}
               <div className="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-2 md:space-y-0 mt-6 font-heading-thin text-orange-100 text-sm md:text-base">
                 <a
-                  href="https://instagram.com/yourhandle"
+                  href="https://www.instagram.com/hhnsmr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-orange-400 transition underline"
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   Instagram
                 </a>
                 <a
-                  href="https://www.saatchiart.com/yourprofile"
+                  href="https://www.saatchiart.com/en-ae/account/profile/2295867"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-orange-400 transition underline"
@@ -92,7 +92,7 @@ export default function ContactPage() {
                   Saatchi Art
                 </a>
                 <a
-                  href="https://yourname.substack.com"
+                  href="https://substack.com/@husnasamer"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-orange-400 transition underline"
@@ -175,9 +175,9 @@ export default function ContactPage() {
 
                 {status === "error" && (
                   <p className="w-full py-3 bg-red-800 text-red-200 rounded font-heading-thin animate-fadeIn">
-                    Something went wrong. Reach me at{" samerhusna@gmail.com "}
+                    Something went wrong. Reach me at {" "}
                     <a
-                      href="mailto:artist@email.com"
+                      href="mailto:samerhusna@gmail.com"
                       className="underline hover:text-red-100"
                     >
                       artist@email.com
