@@ -3,26 +3,39 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import FadeInWhenVisible from "@/app/components/FadeInWhenVisible";
 import Link from "next/link";
+import Navbar from "@/app/components/Navbar";
 
 export default function MemoryPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   // Replace these with your actual image filenames
   const images = Array.from({ length: 20 }).map(
     (_, i) => `/memory/${i + 1}.jpg`
   );
 
+  const handlePrev = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((prev) => (prev! - 1 + images.length) % images.length);
+  };
+
+  const handleNext = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((prev) => (prev! + 1) % images.length);
+  };
+
   return (
-    <section className="px-6 md:px-20 py-16 bg-stone-900 min-h-screen">
+    <section className="px-6 md:px-20 py-16 bg-stone-800 min-h-screen">
+      <Navbar />
       <FadeInWhenVisible>
-        <div className="mb-12">
+        <div className="pt-12 mb-12">
           <Link
             href="/work"
             className="text-base md:text-xl uppercase font-heading underline tracking-widest text-stone-400 mb-2"
           >
             Work
           </Link>
-          <h1 className="text-2xl md:text-4xl font-heading mb-6">
+          <h1 className="text-2xl md:text-4xl font-heading mb-6 text-stone-300">
             A New Truth: On Rayan’s Memory Work
           </h1>
           <p className="text-base font-body md:text-lg text-stone-300 leading-relaxed max-w-3xl">
@@ -41,39 +54,56 @@ export default function MemoryPage() {
 
       {/* Masonry Grid */}
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-        {images.map((src, i) => (
+        {images.map((img, index) => (
           <img
-            key={i}
-            src={src}
-            alt={`Memory ${i + 1}`}
+            key={index}
+            src={img}
+            alt={`Memory ${index + 1}`}
             className="w-full mb-6 rounded-lg shadow-lg hover:opacity-90 hover:cursor-pointer transition-all"
             loading="lazy"
-            onClick={() => setSelectedImage(src)}
+            onClick={() => setSelectedIndex(index)}
           />
         ))}
       </div>
 
       {/* Modal Lightbox */}
-      <Dialog
-        open={!!selectedImage}
-        onClose={() => setSelectedImage(null)}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
-      >
-        <div className="relative max-w-4xl mx-auto px-4">
+      {selectedIndex !== null && (
+        <div className="fixed inset-0 bg-stone-800/90 flex items-center justify-center z-50">
+          {/* Left Arrow */}
           <button
-            onClick={() => setSelectedImage(null)}
-            className="absolute top-3/5 -right-10 transform -translate-y-1/2 text-orange-50 hover:text-orange-400 text-5xl"
+            onClick={handlePrev}
+            className="absolute left-6 text-orange-50 hover:text-orange-400 text-6xl font-bold"
           >
-            &times;
+            &#8592;
           </button>
 
-          <img
-            src={selectedImage || undefined}
-            alt="Selected work"
-            className="max-h-[90vh] w-auto mx-auto rounded-lg shadow-2xl"
-          />
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            className="absolute right-6 text-orange-50 hover:text-orange-400 text-6xl font-bold"
+          >
+            &#8594;
+          </button>
+
+          {/* Image and Close Button */}
+          <div className="relative flex items-center">
+            <img
+              src={images[selectedIndex]}
+              alt={`Artwork ${selectedIndex + 1}`}
+              className="max-w-[80vw] max-h-[80vh] rounded-lg"
+            />
+            <button
+              onClick={() => setSelectedIndex(null)}
+              className="absolute -top-20 right-0 text-orange-50 hover:text-orange-400 text-6xl font-bold"
+            >
+              &times;
+            </button>
+          </div>
+
+          
         </div>
-      </Dialog>
+      )}
+
       <div className="pt-12">
         <Link
           href="/work"
