@@ -42,7 +42,7 @@ export default function ContactPage() {
       <Navbar />
       <div className="min-h-screen bg-stone-800 text-orange-50 px-6 md:px-20 py-20 flex flex-col items-center">
         <div className="w-full max-w-6xl">
-          <h1 className="text-5xl font-heading my-12 text-left">Contact</h1>
+          <h1 className="text-3xl md:text-5xl font-heading my-12 text-left">Contact</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Left Column — Contact Info */}
