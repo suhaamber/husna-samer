@@ -56,13 +56,16 @@ export default async function ThemePage({
               className={`flex flex-col md:flex-row items-center md:space-x-10 md:space-x-reverse-0`}
             >
               {/* Image */}
-              <div className="relative h-[400px] md:w-1/2 w-full mb-6 md:mb-0 flex items-end">
-                <Image
-                  src={work.src}
-                  alt={work.title}
-                  fill
-                  className="object-contain object-left md:object-right"
-                />
+              <div className="relative md:w-1/2 w-full mb-6 md:mb-0 flex items-end justify-center md:justify-end">
+                <div className="inline-block border-4 border-stone-300">
+                  <Image
+                    src={work.src}
+                    alt={work.title}
+                    width={1080} // fixed width
+                    height={0} // let Next.js auto-size height
+                    className="h-auto w-full max-h-[600px] object-contain"
+                  />
+                </div>
               </div>
 
               {/* Text */}
@@ -85,14 +88,14 @@ export default async function ThemePage({
             </div>
           ))}
         </div>
-        
+
         <div className="pt-12">
           <Link
-          href="/work"
-          className="text-base md:text-xl uppercase font-heading underline tracking-widest text-stone-400 pt-8"
-        >
-          back to work
-        </Link>
+            href="/work"
+            className="text-base md:text-xl uppercase font-heading underline tracking-widest text-stone-400 pt-8"
+          >
+            back to work
+          </Link>
         </div>
       </main>
       <Footer />
