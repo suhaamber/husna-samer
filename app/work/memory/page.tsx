@@ -57,20 +57,6 @@ export default function MemoryPage() {
           </div>
         </FadeInWhenVisible>
 
-        {/* Masonry Grid 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Memory ${index + 1}`}
-              className="w-full mb-6 rounded-lg shadow-lg hover:opacity-90 hover:cursor-pointer transition-all"
-              loading="lazy"
-              onClick={() => setSelectedIndex(index)}
-            />
-          ))}
-        </div>*/}
-
         {/* Ordered Grid Layout (Row → Row) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((img, index) => (

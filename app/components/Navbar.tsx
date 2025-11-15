@@ -46,13 +46,18 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
+          <Link href="/about" className="hover:text-orange-300">
+            about
+          </Link>
+        </li>
+        <li>
           <Link href="/work" className="hover:text-orange-300">
             work
           </Link>
         </li>
         <li>
-          <Link href="/notes" className="hover:text-orange-300">
-            notes
+          <Link href="/archive" className="hover:text-orange-300">
+            archive
           </Link>
         </li>
         <li>
