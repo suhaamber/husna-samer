@@ -57,7 +57,7 @@ export default async function ThemePage({
             >
               {/* Image */}
               <div className="relative md:w-1/2 w-full mb-6 md:mb-0 flex items-end justify-center md:justify-end">
-                <div className="inline-block border-4 border-stone-300">
+                <div className="inline-block border-4 border-stone-300 bg-stone-300">
                   <Image
                     src={work.src}
                     alt={work.title}

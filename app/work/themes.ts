@@ -44,14 +44,14 @@ export const themes: Record<
         size: "60cm x 49cm",
       },
       {
-        src: "/Self 3, 4, 2025.png",
+        src: "/Self-full-2025.png",
         title: "Self 3 | Self 4",
         year: "2025",
         medium: "Oil on Canvas Paper",
         size: "29cm x 42cm each",
       },
       {
-        src: "/The Dichotomy of the Perfect Self, 2025.png",
+        src: "/The Dichotomy of the Perfect Self-2025.png",
         title: "The Dichotomy of the Perfect Self",
         year: "2025",
         medium: "Oil on Canvas",
@@ -96,7 +96,7 @@ export const themes: Record<
         size: "45cm x 31cm",
       },
       {
-        src: "/Longing, 2024.png",
+        src: "/Longing-full-2024.png",
         title: "Longing",
         year: "2024",
         medium: "Oil on Canvas",
