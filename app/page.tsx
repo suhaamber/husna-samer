@@ -13,7 +13,6 @@ export const metadata = {
 };
 
 export default function HomePage() {
-
   return (
     <div className="flex flex-col md:flex-row-reverse bg-white font-heading">
       {/* Transparent Navbar */}
@@ -50,58 +49,96 @@ export default function HomePage() {
           </div>
         </main>
 
-        {/* About Section */}
         <section id="about" className="bg-stone-800 py-20 px-6 md:px-20">
           <FadeInWhenVisible>
-            <h2 className="text-5xl font-heading text-orange-50 mb-12">
-              husna samer.
-            </h2>
-            <div className="flex flex-col space-y-8 ml-4 md:ml-12 md:max-w-[60%] mb-12">
-              <p className="font-body text-orange-100 text-justify text-base md:text-lg">
-                <b> Husna Samer </b> is a UAE-based artist whose practice has evolved
-                through years of mentorship, each shaping her exploration of how
-                the meaning of home shifts within an increasingly global and
-                migratory context, altering our perception of memory and
-                consequently of the desired self.
-              </p>
-              <p className="font-body text-orange-100 text-justify text-base md:text-lg">
-                For Samer, memory is both collective and personal, it plays a
-                vital role in reshaping the boundaries of identity. Her work
-                approaches this <i>self</i> as a mutable vessel of experience,
-                where memory gathers, erodes, and transforms. Guided by an
-                instinctive pull toward blues and reds, she constructs emotive,
-                layered compositions that oscillate between serenity and
-                intensity.
-              </p>
-              <p className="font-body text-orange-100 text-justify text-base md:text-lg">
-                Rooted in an inclination toward symbolism and surrealism,
-                Samer’s paintings often navigate the thresholds between the seen
-                and the felt, suggesting inner landscapes rather than depicting
-                literal ones. Beneath these shifting forms lies an undertone of
-                the Romantic movement, visible in her pursuit of emotional
-                depth, atmosphere, and the sublime. Through texture, color, and
-                gesture, she invites viewers into spaces where meaning unfolds
-                between remembering and forgetting, self and surrounding,
-                permanence and change.
-              </p>
+            <div className="md:flex md:items-center md:justify-between">
+
+              {/* Left IMAGE COLLAGE */}
+              <div className="mb-20 md:mb-0 md:w-1/2 relative flex justify-center">
+                <div className="relative w-full max-w-sm md:max-w-md h-[500px] md:h-[600px]">
+                  {/* Landscape 1 */}
+                  <img
+                    src="/archive/archives (58).jpg"
+                    alt=""
+                    className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] rounded-lg shadow-lg object-cover"
+                  />
+
+                  {/* Portrait */}
+                  <img
+                    src="/archive/archives (74).jpg"
+                    alt=""
+                    className="absolute top-[25%] left-[1%] w-[45%] rounded-lg shadow-lg object-cover"
+                  />
+
+                  {/* Landscape 2 */}
+                  <img
+                    src="/archive/archives (114).jpg"
+                    alt=""
+                    className="absolute bottom-0 left-[30%] w-[75%] rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Right TEXT AREA */}
+              <div className="md:w-1/2 ml-12 md:ml-0">
+                <h2 className="text-5xl font-heading text-orange-50 mb-12">
+                  husna samer.
+                </h2>
+
+                <div className="flex flex-col space-y-8 ml-4 md:ml-12 mb-12">
+                  <Link
+                    href="/about"
+                    className="inline-flex items-start text-orange-100 text-2xl md:text-3xl font-heading hover:text-orange-300"
+                  >
+                    about
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8 ml-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
+                    </svg>
+                  </Link>
+                  
+                  <Link
+                    href="/work"
+                    className="inline-flex items-start text-orange-100 text-2xl md:text-3xl font-heading hover:text-orange-300"
+                  >
+                    View Work
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8 ml-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
+                    </svg>
+                  </Link>
+
+                  <Link
+                    href="/archive"
+                    className="inline-flex items-start text-orange-100 text-2xl md:text-3xl font-heading hover:text-orange-300"
+                  >
+                    View Archive
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8 ml-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
             </div>
-            <Link
-              href="/work"
-              className="inline-flex items-start text-orange-100 text-2xl md:text-3xl font-heading hover:text-orange-300"
-            >
-              View Work
-              {/* Diagonal up arrow SVG */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 ml-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z" />
-              </svg>
-            </Link>
           </FadeInWhenVisible>
         </section>
 

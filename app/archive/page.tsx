@@ -6,14 +6,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function NotesPage() {
-  const images = Array.from({ length: 122 }, (_, i) => `/archive/archives%20(${i + 1}).jpg`);
+  const images = Array.from({ length: 30 }, (_, i) => `/archive/archives%20(${i + 1}).jpg`);
 
   return (
     <div className="min-h-screen bg-stone-800">
       <section className="text-orange-50 px-4 py-20 md:px-20">
         <Navbar />
         {/* Heading */}
-        <h1 className="text-5xl md:text-7xl font-heading my-10">archive</h1>
+        <h1 className="text-4xl md:text-7xl font-heading my-10">archive</h1>
 
         {/* Masonry Grid */}
         <div className="columns-3 lg:columns-6 gap-4 space-y-4">
