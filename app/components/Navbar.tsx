@@ -56,11 +56,6 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/archive" className="hover:text-orange-300">
-            archive
-          </Link>
-        </li>
-        <li>
           <Link href="/contact" className="hover:text-orange-300">
             contact
           </Link>
