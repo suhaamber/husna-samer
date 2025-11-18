@@ -10,8 +10,8 @@ export default function NotesPage() {
 
   return (
     <div className="min-h-screen bg-stone-800">
-      <section className="text-orange-50 px-4 py-20 md:px-20">
-        <Navbar />
+      <Navbar />
+      <section className="text-orange-50 max-w-5xl mx-auto px-6 py-20">
         {/* Heading */}
         <h1 className="text-4xl md:text-7xl font-heading my-10">archive</h1>
 

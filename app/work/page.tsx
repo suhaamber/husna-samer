@@ -70,13 +70,13 @@ export default function WorkPage() {
     <>
       <div className="min-h-screen bg-stone-800 text-orange-50 px-6 md:px-20 py-20 md:py-36">
         <Navbar />
-        <main>
+        <main className="md:max-w-5xl md:mx-auto md:px-6">
           <FadeInWhenVisible>
             <h1 className="text-5xl font-heading mb-10">Work</h1>
           </FadeInWhenVisible>
 
           <FadeInWhenVisible>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {Object.entries(themes).map(([key, theme]) => (
                 <Link
                   key={key}

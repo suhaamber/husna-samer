@@ -41,7 +41,7 @@ export default function ContactPage() {
     <>
       <Navbar />
       <div className="min-h-screen bg-stone-800 text-orange-50 px-6 md:px-20 py-20 flex flex-col items-center">
-        <div className="w-full max-w-6xl">
+        <div className="w-full max-w-5xl px-6">
           <h1 className="text-3xl md:text-5xl font-heading my-12 text-left">Contact</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -98,6 +98,14 @@ export default function ContactPage() {
                   className="hover:text-orange-400 transition underline"
                 >
                   Substack
+                </a>
+                <a
+                  href="https://thaerselect.com/artists/61-husna-samer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-400 transition underline"
+                >
+                  Thaer Select
                 </a>
               </div>
             </div>

@@ -51,44 +51,18 @@ export default function HomePage() {
 
         <section id="about" className="bg-stone-800 py-20 px-6 md:px-20">
           <FadeInWhenVisible>
-            <div className="md:flex md:items-center md:justify-between">
-
-              {/* Left IMAGE COLLAGE */}
-              <div className="mb-20 md:mb-0 md:w-1/2 relative flex justify-center">
-                <div className="relative w-full max-w-sm md:max-w-md h-[500px] md:h-[600px]">
-                  {/* Landscape 1 */}
-                  <img
-                    src="/archive/archives (58).jpg"
-                    alt=""
-                    className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] rounded-lg shadow-lg object-cover"
-                  />
-
-                  {/* Portrait */}
-                  <img
-                    src="/archive/archives (74).jpg"
-                    alt=""
-                    className="absolute top-[25%] left-[1%] w-[45%] rounded-lg shadow-lg object-cover"
-                  />
-
-                  {/* Landscape 2 */}
-                  <img
-                    src="/archive/archives (114).jpg"
-                    alt=""
-                    className="absolute bottom-0 left-[30%] w-[75%] rounded-lg shadow-lg object-cover"
-                  />
-                </div>
-              </div>
+            <div className="md:flex md:items-center md:justify-start">
 
               {/* Right TEXT AREA */}
-              <div className="md:w-1/2 ml-12 md:ml-0">
+              <div className="md:w-1/2 ml-6 md:ml-0">
                 <h2 className="text-5xl font-heading text-orange-50 mb-12">
-                  husna samer.
+                  husna samer
                 </h2>
 
                 <div className="flex flex-col space-y-8 ml-4 md:ml-12 mb-12">
                   <Link
                     href="/about"
-                    className="inline-flex items-start text-orange-100 text-2xl md:text-3xl font-heading hover:text-orange-300"
+                    className="inline-flex items-start text-stone-100 text-lg md:text-3xl font-heading hover:text-orange-300"
                   >
                     about
                     <svg
@@ -105,7 +79,7 @@ export default function HomePage() {
                   
                   <Link
                     href="/work"
-                    className="inline-flex items-start text-orange-100 text-2xl md:text-3xl font-heading hover:text-orange-300"
+                    className="inline-flex items-start text-stone-100 text-lg md:text-3xl font-heading hover:text-orange-300"
                   >
                     View Work
                     <svg
@@ -122,7 +96,7 @@ export default function HomePage() {
 
                   <Link
                     href="/archive"
-                    className="inline-flex items-start text-orange-100 text-2xl md:text-3xl font-heading hover:text-orange-300"
+                    className="inline-flex items-start text-stone-100 text-lg md:text-3xl font-heading hover:text-orange-300"
                   >
                     View Archive
                     <svg
